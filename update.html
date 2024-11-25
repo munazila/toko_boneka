@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block konten %}
+
+    <h1>SELAMAT BERBELANJA</h1>
+    <form action="/simpan" method="post" >
+        <input type="text" name="nama" placeholder="Nama Pembeli" ><br>
+        <input type="text" name="boneka" placeholder="Boneka" ><br>
+        <input type="number" name="Jumlah" min="1" max="20" placeholder="Jumlah" ><br>
+        <button type="submit">Beli</button>
+    </form>
+
+
+{% endblock %}

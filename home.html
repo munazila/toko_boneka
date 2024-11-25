@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block konten %}
+    <h1>SELAMAT BERBELANJA</h1>
+    <form action="/simpan" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="pembeli" required>
+
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Boneka</label>
+          <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"min="1" max="50" name="boneka" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Jumlah</label>
+          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="jumlah" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+{% endblock %} 

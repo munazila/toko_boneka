@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block konten %}
+    <table border="1">
+        <tr>
+            <th>NAMA</th>
+            <th>BONEKA</th>
+            <th>JUMLAH</th>
+        </tr>
+
+        {% for result in data %}
+        <tr>
+            <td>{{ result[1] }}</td>
+            <td>{{ result[2] }}</td>
+            <td>{{ result[3] }}</td>
+            <td> <a href="/update/{{ result[0] }}">UPDATE</a> - <a href="/hapus/{{ result[0] }}">DELETE</a> </td>
+        </tr>
+        {% endfor %}
+        
+        
+        <a href="{{ url_for('logout' ) }}">LOGOUT 🐱</a>
+    </table>
+{% endblock %}
